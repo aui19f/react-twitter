@@ -4,7 +4,23 @@ import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+
+import {
+  doc,
+  setDoc,
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  query,
+  where,
+} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,5 +37,20 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-export { app, getAuth, onAuthStateChanged };
+export {
+  app,
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  collection,
+  getDocs,
+  db,
+  addDoc,
+  setDoc,
+  doc,
+  query,
+  where,
+  signInWithEmailAndPassword,
+};

@@ -79,6 +79,16 @@ table {
   }
 	body{}
 
+  input, button, select{
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 4px;
+    &::placeholder{
+      color: #bbbbbb;
+    }
+  }
+
 `;
 
 export default GlobalStyles;

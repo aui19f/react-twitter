@@ -12,10 +12,10 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       { path: "profile", element: <Profile /> },
-      { path: "login", element: <Login /> },
-      { path: "create-account", element: <CreateAccount /> },
     ],
   },
+  { path: "login", element: <Login /> },
+  { path: "create-account", element: <CreateAccount /> },
 ]);
 
 export default router;
